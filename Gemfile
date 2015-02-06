@@ -39,5 +39,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'pry-rails'
-gem 'minitest-rails'
-gem "minitest-rails-capybara"
+
+group :test, :development do
+  gem 'minitest-rails'
+  gem "minitest-rails-capybara"
+  gem 'launchy'
+end

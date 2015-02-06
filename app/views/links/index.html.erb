@@ -1,0 +1,15 @@
+<%= form_for @link do |f| %>
+  <%= f.text_field :url %>
+  <%= f.submit %>
+<% end %>
+<br>
+<br>
+<% if flash[:link] %>
+  URL shortened: <%= link_to flash[:link], flash[:link], id: "created-link" %>
+  <br>
+<% end %>
+<br>
+<% @links.each do |link| %>
+  <%= link.url %> | <%= link_to link.local_path, link.local_path %> | <%= link.visits %>
+  <br>
+<% end %>

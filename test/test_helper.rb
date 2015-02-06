@@ -6,5 +6,5 @@ require "minitest/pride"
 require "minitest/rails/capybara"
 
 class ActiveSupport::TestCase
-    ActiveRecord::Migration.check_pending!
+  ActiveRecord::Migration.check_pending!
 end
